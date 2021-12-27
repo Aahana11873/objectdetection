@@ -5,15 +5,13 @@ function preload(){
     img=loadImage("bedroom.jpg")
 }
 function setup(){
-    function setup(){
-        canvas=createCanvas(400,400);
+        canvas=createCanvas(600,600);
         canvas.center();
         video=createCapture(VIDEO);
         video.size(400,400);
         video.hide();
         objectDetector=ml5.objectDetector('cocossd',modelLoaded);
         document.getElementById("status").innerHTML="Status :Detecting Object";
-    }
 }
 function modelLoaded(){
     console.log("model Loaded");
@@ -30,7 +28,7 @@ function gotResult(error,results){
     }
 }
 function draw(){
-    image(img,0,0,640,420);
+    image(img,0,0,600,600);
    fill("blue");
    text("bed",215,75);
    noFill();
