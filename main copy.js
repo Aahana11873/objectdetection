@@ -5,7 +5,7 @@ function preload(){
     img=loadImage("bedroom.jpg")
 }
 function setup(){
-        canvas=createCanvas(600,600);
+        canvas=createCanvas(500,500);
         canvas.center();
         video=createCapture(VIDEO);
         video.size(400,400);
@@ -28,10 +28,13 @@ function gotResult(error,results){
     }
 }
 function draw(){
-    image(img,0,0,600,600);
+    image(img,0,0,500,500);
    fill("blue");
    text("bed",215,75);
    noFill();
    stroke("red")
    rect(200,60,400,350)
+}
+function home(){
+    window.location="index.html";
 }
